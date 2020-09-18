@@ -1,0 +1,23 @@
+.header {
+  text-align: center;
+  color: #286090;
+}
+
+.flex_Spacearround{
+  display: flex;
+  justify-content: space-around;
+}
+.btn_clicked{
+  background-color: #286090;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 5%;
+}
+.btn_style{
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 100px;
+  border-radius: 5%;
+}

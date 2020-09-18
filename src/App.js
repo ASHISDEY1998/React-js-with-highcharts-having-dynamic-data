@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Linechart from "./Components/Linechart";
+import Styles from "./App.module.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    linecharts: [],
+  };
+  componentDidMount() {
+    fetch("./data.json")
+      .then((res) => res.json())
+      .then((result) => {
+        this.setState({
+          linecharts: result.linecharts,
+        });
+      });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1 className={Styles.header}>Some Random line Charts</h1>
+        <div className={Styles.flex_Spacearround}>
+          {this.state.linecharts.map((graph, i) => {
+            return (
+              <Linechart
+                key={graph.id}
+                cat={graph.catagories}
+                title={graph.title}
+                weekupdate={graph.week_data}
+                monthupdate={graph.month_data}
+                yearupdate={graph.year_data}
+              />
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;

@@ -1,0 +1,77 @@
+{
+  "linecharts": [
+    {
+      "id": 1,
+      "title":"Chart 1",
+      "catagories": [
+        "A",
+        "B",
+        "C"
+      ],
+      "week_data": [
+        1,
+        2,
+        3
+      ],
+      "month_data": [
+        4,
+        5,
+        6
+      ],
+      "year_data": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": 2,
+      "title":"Chart 2",
+      "catagories": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "week_data": [
+        5,
+        3,
+        4
+      ],
+      "month_data": [
+        10,
+        16,
+        12
+      ],
+      "year_data": [
+        45,
+        62,
+        75
+      ]
+    },
+    {
+      "id": 3,
+      "title":"Chart 3",
+      "catagories": [
+        "P",
+        "Q",
+        "R"
+      ],
+      "week_data": [
+        8,
+        3,
+        7
+      ],
+      "month_data": [
+        14,
+        13,
+        20
+      ],
+      "year_data": [
+        46,
+        52,
+        75
+      ]
+    }
+  ]
+  
+}
